@@ -86,11 +86,7 @@ export const TeacherPortalView: React.FC<TeacherPortalViewProps> = ({ currentUse
       <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <img
-              src={teacher.avatarUrl}
-              alt={teacher.name}
-              className="w-16 h-16 rounded-2xl object-cover border-2 border-emerald-500 shadow-sm shrink-0"
-            />
+            <div className="grid h-20 w-20 place-items-center rounded-2xl bg-gradient-to-br from-slate-950 via-emerald-800 to-emerald-500 text-base font-black text-white shadow-md border border-emerald-300/20">{teacher.nameBn.slice(0, 2)}</div>
             <div>
               <div className="flex items-center gap-2">
                 <span className="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded font-mono">
