@@ -31,7 +31,7 @@ export const HomeHero: React.FC<HomeHeroProps> = ({
   onNavigate,
   onOpenNotice,
 }) => {
-  const headmaster = INITIAL_TEACHERS[0];
+  const headmaster = INITIAL_TEACHERS.find((teacher) => teacher.id === 'teacher-head') || INITIAL_TEACHERS[0];
   const featuredNotice = notices.find((n) => n.isFeatured) || notices[0];
 
   const quotas = [
