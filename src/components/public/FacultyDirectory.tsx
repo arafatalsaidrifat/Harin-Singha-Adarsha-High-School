@@ -70,11 +70,7 @@ export const FacultyDirectory: React.FC<FacultyDirectoryProps> = ({ lang }) => {
             className="soft-card p-6 flex flex-col justify-between space-y-4"
           >
             <div className="flex items-start gap-4">
-              <img
-                src={teacher.avatarUrl}
-                alt={teacher.name}
-                className="w-20 h-20 rounded-2xl object-cover border-2 border-emerald-500/40 shadow-sm shrink-0"
-              />
+              <div className="grid h-20 w-20 place-items-center rounded-2xl bg-gradient-to-br from-slate-950 via-emerald-800 to-emerald-500 text-base font-black text-white shadow-md border border-emerald-300/20">{teacher.nameBn.slice(0, 2)}</div>
               <div className="min-w-0 flex-1">
                 <span className="text-[10px] font-mono font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full inline-block">
                   Index: {teacher.indexNumber}
