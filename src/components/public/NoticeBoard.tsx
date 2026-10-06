@@ -38,10 +38,10 @@ export const NoticeBoard: React.FC<NoticeBoardProps> = ({ notices, lang }) => {
   });
 
   return (
-    <div className="space-y-6 py-6">
+    <div className="space-y-8 py-3">
       
       {/* Header */}
-      <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+      <div className="soft-card p-6 sm:p-8 space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full">
@@ -96,7 +96,7 @@ export const NoticeBoard: React.FC<NoticeBoardProps> = ({ notices, lang }) => {
             <div
               key={notice.id}
               onClick={() => setActiveNoticeModal(notice)}
-              className="bg-white rounded-xl p-5 border border-slate-200 hover:border-emerald-500 shadow-xs hover:shadow-md transition cursor-pointer flex flex-col sm:flex-row sm:items-center justify-between gap-4 group"
+              className="soft-card p-5 cursor-pointer flex flex-col sm:flex-row sm:items-center justify-between gap-4 group"
             >
               <div className="flex items-start gap-4">
                 <div className={`p-3 rounded-xl shrink-0 ${
