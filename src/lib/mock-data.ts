@@ -73,8 +73,7 @@ export const INITIAL_USERS: User[] = [
     email: 'headmaster@hsahs.edu.bd',
     role: 'ADMIN',
     phone: '+8801309-121123',
-    avatarUrl: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=250',
-  },
+      },
   {
     id: 'user-teacher-1',
     name: 'Animesh Chandra Barman',
@@ -83,8 +82,7 @@ export const INITIAL_USERS: User[] = [
     role: 'TEACHER',
     phone: '+8801712-893452',
     associatedId: 'teacher-3',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=250',
-  },
+      },
   {
     id: 'user-student-1',
     name: 'Sumaiya Akter Rimi',
@@ -93,8 +91,7 @@ export const INITIAL_USERS: User[] = [
     role: 'STUDENT',
     phone: '+8801719-450123',
     associatedId: 'student-1',
-    avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=250',
-  },
+      },
 ];
 
 export const INITIAL_TEACHERS: TeacherProfile[] = [
@@ -133,8 +130,7 @@ export const INITIAL_TEACHERS: TeacherProfile[] = [
     educationalQualification: 'M.Sc (Mathematics), B.Ed (1st Class)',
     assignedClasses: [9, 10],
     assignedSubjects: ['Higher Mathematics'],
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300',
-  },
+      },
   {
     id: 'teacher-1',
     name: 'Md. Shafiur Rahman',
@@ -151,8 +147,7 @@ export const INITIAL_TEACHERS: TeacherProfile[] = [
     educationalQualification: 'M.A (English), B.Ed',
     assignedClasses: [8, 9, 10],
     assignedSubjects: ['English 1st Paper', 'English 2nd Paper'],
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=300',
-  },
+      },
   {
     id: 'teacher-2',
     name: 'Md. Ehtashamul Hoque',
@@ -169,8 +164,7 @@ export const INITIAL_TEACHERS: TeacherProfile[] = [
     educationalQualification: 'M.Sc (Chemistry), M.Ed',
     assignedClasses: [9, 10],
     assignedSubjects: ['Chemistry', 'General Science'],
-    avatarUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=300',
-  },
+      },
   {
     id: 'teacher-3',
     name: 'Animesh Chandra Barman',
@@ -187,8 +181,7 @@ export const INITIAL_TEACHERS: TeacherProfile[] = [
     educationalQualification: 'B.Sc (Hons), M.Sc (Physics), B.Ed',
     assignedClasses: [6, 7, 9],
     assignedSubjects: ['General Mathematics', 'Physics'],
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300',
-  },
+      },
   {
     id: 'teacher-4',
     name: 'K.M. Sohag Rasul',
@@ -205,8 +198,7 @@ export const INITIAL_TEACHERS: TeacherProfile[] = [
     educationalQualification: 'B.Sc (Computer Science & Engineering)',
     assignedClasses: [6, 7, 8, 9, 10],
     assignedSubjects: ['Information & Communication Technology'],
-    avatarUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300',
-  },
+      },
   {
     id: 'teacher-5',
     name: 'Most. Dilruba Begum',
@@ -223,8 +215,7 @@ export const INITIAL_TEACHERS: TeacherProfile[] = [
     educationalQualification: 'M.A (Bangla), B.Ed',
     assignedClasses: [6, 8, 9],
     assignedSubjects: ['Bangla 1st Paper', 'Bangla 2nd Paper'],
-    avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300',
-  },
+      },
   {
     id: 'teacher-6',
     name: 'Md. Abdur Rahim',
@@ -241,8 +232,7 @@ export const INITIAL_TEACHERS: TeacherProfile[] = [
     educationalQualification: 'M.S.S (Political Science), B.Ed',
     assignedClasses: [7, 8, 9, 10],
     assignedSubjects: ['Bangladesh & Global Studies', 'History'],
-    avatarUrl: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&q=80&w=300',
-  },
+      },
 ];
 
 export const INITIAL_STUDENTS: StudentProfile[] = [
