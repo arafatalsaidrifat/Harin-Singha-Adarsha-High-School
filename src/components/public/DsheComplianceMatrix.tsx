@@ -248,11 +248,7 @@ export const DsheComplianceMatrix: React.FC<DsheComplianceMatrixProps> = ({ lang
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {INITIAL_TEACHERS.map((teacher) => (
                     <div key={teacher.id} className="p-3 rounded-xl border border-slate-200 bg-slate-50/70 flex items-center gap-3">
-                      <img
-                        src={teacher.avatarUrl}
-                        alt={teacher.name}
-                        className="w-12 h-12 rounded-full object-cover border border-emerald-500"
-                      />
+                      <div className="grid h-20 w-20 place-items-center rounded-2xl bg-gradient-to-br from-slate-950 via-emerald-800 to-emerald-500 text-base font-black text-white shadow-md border border-emerald-300/20">{teacher.nameBn.slice(0, 2)}</div>
                       <div className="flex-1 min-w-0 text-xs">
                         <p className="font-bold text-slate-900 truncate">
                           {lang === 'bn' ? teacher.nameBn : teacher.name}
