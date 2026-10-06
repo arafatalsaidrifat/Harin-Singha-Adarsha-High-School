@@ -187,11 +187,7 @@ export const HomeHero: React.FC<HomeHeroProps> = ({
 
           <div className="flex flex-col sm:flex-row gap-6 items-start">
             <div className="shrink-0 flex flex-col items-center">
-              <img
-                src={headmaster.avatarUrl}
-                alt={headmaster.name}
-                className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover shadow-md border-2 border-emerald-500/40"
-              />
+              <div className="grid h-28 w-28 place-items-center rounded-2xl bg-gradient-to-br from-emerald-950 via-emerald-700 to-emerald-500 text-3xl font-black text-white shadow-md border border-emerald-300/20">HS</div>
               <span className="mt-2 text-xs font-bold text-slate-900 text-center">
                 {lang === 'bn' ? headmaster.nameBn : headmaster.name}
               </span>
