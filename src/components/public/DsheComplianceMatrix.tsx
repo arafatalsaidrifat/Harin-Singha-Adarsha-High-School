@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { 
   DSHE_COMPLIANCE_CATEGORIES, 
   MANAGING_COMMITTEE, 
@@ -33,12 +33,13 @@ export const DsheComplianceMatrix: React.FC<DsheComplianceMatrixProps> = ({ lang
   const [searchQuery, setSearchQuery] = useState('');
   const detailRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!selectedCategoryKey) return;
-    window.requestAnimationFrame(() => detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
-  }, [selectedCategoryKey]);
 
   const activeCategory = DSHE_COMPLIANCE_CATEGORIES.find((c) => c.key === selectedCategoryKey) || DSHE_COMPLIANCE_CATEGORIES[0];
+
+  const handleCategorySelect = (key: string) => {
+    setSelectedCategoryKey(key);
+    window.requestAnimationFrame(() => detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+  };
 
   const handlePrint = () => {
     window.print();
@@ -99,7 +100,7 @@ export const DsheComplianceMatrix: React.FC<DsheComplianceMatrixProps> = ({ lang
               return (
                 <button
                   key={cat.key}
-                  onClick={() => setSelectedCategoryKey(cat.key)} aria-label={`${lang === 'bn' ? 'দফা' : 'Point'} ${cat.number}: ${lang === 'bn' ? cat.titleBn : cat.titleEn}`}
+                  onClick={() => handleCategorySelect(cat.key)} aria-label={`${lang === 'bn' ? 'দফা' : 'Point'} ${cat.number}: ${lang === 'bn' ? cat.titleBn : cat.titleEn}`}
                   className={`w-full text-left p-3.5 rounded-xl transition flex items-center justify-between cursor-pointer border ${
                     isSelected
                       ? 'bg-emerald-700 text-white border-emerald-700 shadow-md font-bold'
