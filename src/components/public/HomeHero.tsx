@@ -44,11 +44,11 @@ export const HomeHero: React.FC<HomeHeroProps> = ({
   ];
 
   return (
-    <div className="space-y-10 py-6">
+    <div className="space-y-14 py-4 sm:py-6">
       
       {/* Ticker for Urgent School Announcements */}
       {featuredNotice && (
-        <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-3 flex items-center justify-between gap-4">
+        <div className="soft-card border-amber-200/70 bg-amber-50/80 rounded-2xl p-3.5 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3 overflow-hidden">
             <span className="shrink-0 bg-amber-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider flex items-center gap-1">
               <AlertCircle className="w-3.5 h-3.5" />
@@ -73,7 +73,7 @@ export const HomeHero: React.FC<HomeHeroProps> = ({
         {/* Card 1: Online Admission */}
         <div
           onClick={() => onNavigate('admissions')}
-          className="bg-white border-2 border-emerald-500/30 hover:border-emerald-500 rounded-2xl p-5 shadow-sm hover:shadow-md transition cursor-pointer group flex flex-col justify-between"
+          className="soft-card border-emerald-200/70 p-5 cursor-pointer group flex flex-col justify-between"
         >
           <div>
             <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4 group-hover:scale-110 transition">
@@ -97,7 +97,7 @@ export const HomeHero: React.FC<HomeHeroProps> = ({
         {/* Card 2: Academic Results */}
         <div
           onClick={() => onNavigate('results')}
-          className="bg-white border border-slate-200 hover:border-blue-500 rounded-2xl p-5 shadow-sm hover:shadow-md transition cursor-pointer group flex flex-col justify-between"
+          className="soft-card p-5 cursor-pointer group flex flex-col justify-between"
         >
           <div>
             <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center mb-4 group-hover:scale-110 transition">
@@ -121,7 +121,7 @@ export const HomeHero: React.FC<HomeHeroProps> = ({
         {/* Card 3: bKash Fee Payment */}
         <div
           onClick={() => onNavigate('fees')}
-          className="bg-white border border-slate-200 hover:border-pink-500 rounded-2xl p-5 shadow-sm hover:shadow-md transition cursor-pointer group flex flex-col justify-between"
+          className="soft-card p-5 cursor-pointer group flex flex-col justify-between"
         >
           <div>
             <div className="w-12 h-12 rounded-xl bg-pink-100 text-pink-700 flex items-center justify-center mb-4 group-hover:scale-110 transition">
@@ -145,7 +145,7 @@ export const HomeHero: React.FC<HomeHeroProps> = ({
         {/* Card 4: DSHE Compliance 11 Point */}
         <div
           onClick={() => onNavigate('dshe')}
-          className="bg-white border border-slate-200 hover:border-emerald-600 rounded-2xl p-5 shadow-sm hover:shadow-md transition cursor-pointer group flex flex-col justify-between"
+          className="soft-card p-5 cursor-pointer group flex flex-col justify-between"
         >
           <div>
             <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-4 group-hover:scale-110 transition">
@@ -172,7 +172,7 @@ export const HomeHero: React.FC<HomeHeroProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
         {/* Headmaster's Speech */}
-        <div className="lg:col-span-2 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-5">
+        <div className="lg:col-span-2 soft-card p-6 sm:p-8 space-y-5">
           <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
             <div className="w-3 h-8 bg-emerald-600 rounded-full"></div>
             <div>
@@ -228,7 +228,7 @@ export const HomeHero: React.FC<HomeHeroProps> = ({
         </div>
 
         {/* Real-time Seat Quota & Class Capacities */}
-        <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+        <div className="soft-card p-6 space-y-4">
           <div className="flex items-center justify-between border-b border-slate-100 pb-3">
             <h3 className="font-extrabold text-slate-900 text-base flex items-center gap-2">
               <TrendingUp className="w-5 h-5 text-emerald-600" />
@@ -284,7 +284,7 @@ export const HomeHero: React.FC<HomeHeroProps> = ({
       </div>
 
       {/* Institutional Metric Baseline Cards */}
-      <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-emerald-950 rounded-2xl p-6 sm:p-8 text-white shadow-xl space-y-6">
+      <div className="overflow-hidden rounded-[2rem] bg-[var(--brand-950)] p-6 sm:p-8 text-white shadow-[0_24px_70px_rgba(7,59,42,.18)] space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-700/80 pb-4">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
