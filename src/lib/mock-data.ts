@@ -1,3 +1,5 @@
+import { FATHER_PHOTO } from './father-photo';
+
 import {
   AdmissionApplication,
   ClassRoutineItem,
@@ -96,6 +98,25 @@ export const INITIAL_USERS: User[] = [
 ];
 
 export const INITIAL_TEACHERS: TeacherProfile[] = [
+  {
+    id: 'teacher-sajedur',
+    name: 'Md. Sajedur Rahman',
+    nameBn: 'মোঃ সাজেদুর রহমান',
+    designation: 'Assistant Teacher',
+    designationBn: 'সহকারী শিক্ষক',
+    indexNumber: 'Not provided',
+    mpoStatus: 'MPO Enrolled',
+    mobile: '',
+    email: '',
+    subjectSpecialty: 'Agriculture Studies & Physical Education',
+    subjectSpecialtyBn: 'কৃষি শিক্ষা ও শারীরিক শিক্ষা',
+    joiningDate: 'Not provided',
+    educationalQualification: 'Not provided',
+    assignedClasses: [],
+    assignedSubjects: ['Agriculture Studies', 'Physical Education'],
+    avatarUrl: FATHER_PHOTO,
+  },
+
   {
     id: 'teacher-head',
     name: 'Md. Nazmul Haque Sarker',
