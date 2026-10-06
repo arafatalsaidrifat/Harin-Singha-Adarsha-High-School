@@ -16,7 +16,64 @@ export const FacultyDirectory: React.FC<FacultyDirectoryProps> = ({ lang }) => {
   const filtered = INITIAL_TEACHERS.filter((teacher) => {
     const q = searchQuery.toLowerCase().trim();
     if (!q) return true;
-    return (
+    return (<div className="space-y-6">
+      <section className="overflow-hidden rounded-[2rem] bg-[var(--brand-950)] p-5 text-white shadow-[0_24px_70px_rgba(6,38,28,.18)] sm:p-7">
+        <div className="grid items-center gap-6 lg:grid-cols-[.32fr_1fr]">
+          <div className="relative mx-auto w-full max-w-[190px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5 shadow-2xl">
+            <img src="/sajedur-rahman.webp" alt="Md. Sajedur Rahman" className="aspect-[4/5] h-full w-full object-cover" />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-12">
+              <span className="text-[10px] font-black uppercase tracking-[.12em] text-emerald-200">Faculty</span>
+            </div>
+          </div>
+          <div>
+            <div className="flex flex-wrap gap-2">
+              <span className="rounded-full border border-emerald-300/15 bg-emerald-400/10 px-3 py-1.5 text-[10px] font-black text-emerald-100">
+                {lang === 'bn' ? 'শিক্ষক পরিচিতি' : 'Faculty spotlight'}
+              </span>
+              <span className="rounded-full border border-white/10 bg-white/[.06] px-3 py-1.5 text-[10px] font-mono text-white/55">
+                {lang === 'bn' ? 'কৃষি শিক্ষা · শারীরিক শিক্ষা' : 'Agriculture Studies · Physical Education'}
+              </span>
+            </div>
+            <h2 className="mt-3 text-2xl font-black tracking-tight sm:text-3xl">Md. Sajedur Rahman</h2>
+            <p className="mt-1 text-sm font-bold text-emerald-200">
+              {lang === 'bn' ? 'সহকারী শিক্ষক' : 'Assistant Teacher'}
+            </p>
+            <p className="mt-4 max-w-2xl text-xs leading-6 text-white/65">
+              {lang === 'bn'
+                ? 'কৃষি শিক্ষা ও শারীরিক শিক্ষা বিষয়ে পাঠদান। বিদ্যালয়ের দৈনন্দিন শিক্ষার্থী উন্নয়ন, শৃঙ্খলা ও সহশিক্ষা কার্যক্রমে অবদান রাখেন।'
+                : 'Teaches Agriculture Studies and Physical Education, supporting students’ academic development, discipline and co-curricular growth.'}
+            </p>
+            <div className="mt-5 grid gap-2 sm:grid-cols-2">
+              <div className="rounded-2xl border border-white/10 bg-white/[.06] p-3">
+                <span className="block text-[10px] text-white/35">{lang === 'bn' ? 'বিষয়' : 'Subjects'}</span>
+                <span className="mt-1 block text-xs font-black text-white">{lang === 'bn' ? 'কৃষি শিক্ষা ও শারীরিক শিক্ষা' : 'Agriculture Studies & Physical Education'}</span>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/[.06] p-3">
+                <span className="block text-[10px] text-white/35">{lang === 'bn' ? 'পদবি' : 'Designation'}</span>
+                <span className="mt-1 block text-xs font-black text-white">{lang === 'bn' ? 'সহকারী শিক্ষক' : 'Assistant Teacher'}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="soft-card p-5">
+          <p className="eyebrow">{lang === 'bn' ? 'শিক্ষক নেতৃত্ব' : 'Academic leadership'}</p>
+          <h3 className="mt-2 text-sm font-black text-slate-950">Md. Shafiur Rahman</h3>
+          <p className="mt-1 text-xs font-semibold text-[var(--brand-700)]">{lang === 'bn' ? 'প্রধান সহকারী শিক্ষক · গণিত' : 'Head Assistant Teacher · Mathematics'}</p>
+        </div>
+        <div className="soft-card p-5">
+          <p className="eyebrow">{lang === 'bn' ? 'বিষয়ভিত্তিক শিক্ষক' : 'Subject faculty'}</p>
+          <h3 className="mt-2 text-sm font-black text-slate-950">Md. Eleyas Kanchan Rikto</h3>
+          <p className="mt-1 text-xs font-semibold text-[var(--brand-700)]">{lang === 'bn' ? 'সহকারী শিক্ষক · ভৌত বিজ্ঞান' : 'Assistant Teacher · Physical Science'}</p>
+        </div>
+        <div className="soft-card p-5">
+          <p className="eyebrow">{lang === 'bn' ? 'ছবি পরে যুক্ত হবে' : 'Portraits can be added later'}</p>
+          <p className="mt-2 text-xs leading-6 text-slate-600">{lang === 'bn' ? 'অন্যান্য শিক্ষক ও কর্মচারীদের অনুমোদিত ছবি সংগ্রহ হলে একই ডিজাইন কার্ডে যুক্ত করা যাবে।' : 'Approved portraits for other teachers and staff can be added later without changing the directory design.'}</p>
+        </div>
+      </section>
+
       teacher.name.toLowerCase().includes(q) ||
       teacher.nameBn.toLowerCase().includes(q) ||
       teacher.subjectSpecialty.toLowerCase().includes(q) ||
@@ -217,6 +274,7 @@ export const FacultyDirectory: React.FC<FacultyDirectoryProps> = ({ lang }) => {
           {(searchQuery ? filtered : otherTeachers).map((teacher, index) => renderTeacherCard(teacher, index))}
         </div>
       </section>
+      </div>
     </div>
   );
 };
