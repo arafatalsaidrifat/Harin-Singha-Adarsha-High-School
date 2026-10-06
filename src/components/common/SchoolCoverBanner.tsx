@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { SchoolLogo } from './SchoolLogo';
 import { SCHOOL_INFO } from '../../lib/mock-data';
-import { appStorage } from '../../lib/storage';
 import {
   MapPin,
   Award,
@@ -26,7 +25,7 @@ export const SchoolCoverBanner: React.FC<Props> = ({ lang, onQuickAction }) => {
   const [url, setUrl] = useState('');
 
   useEffect(() => {
-    const saved = appStorage.getCoverImage();
+    const saved = localStorage.getItem('hsahs_cover_image_v2');
     if (saved) setCover(saved);
   }, []);
 
@@ -38,7 +37,7 @@ export const SchoolCoverBanner: React.FC<Props> = ({ lang, onQuickAction }) => {
       const base64 = event.target?.result as string;
       if (!base64) return;
       setCover(base64);
-      appStorage.setCoverImage(base64);
+      localStorage.setItem('hsahs_cover_image_v2', base64);
       setModal(false);
     };
     reader.readAsDataURL(file);
@@ -48,14 +47,14 @@ export const SchoolCoverBanner: React.FC<Props> = ({ lang, onQuickAction }) => {
     const value = url.trim();
     if (!value) return;
     setCover(value);
-    appStorage.setCoverImage(value);
+    localStorage.setItem('hsahs_cover_image_v2', value);
     setUrl('');
     setModal(false);
   };
 
   const reset = () => {
     setCover(null);
-    localStorage.removeItem('hsahs_cover_image_v1');
+    localStorage.removeItem('hsahs_cover_image_v2');
     setModal(false);
   };
 
