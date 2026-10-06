@@ -20,7 +20,7 @@ export const FacultyDirectory: React.FC<FacultyDirectoryProps> = ({ lang }) => {
       <section className="overflow-hidden rounded-[2rem] bg-[var(--brand-950)] p-5 text-white shadow-[0_24px_70px_rgba(6,38,28,.18)] sm:p-7">
         <div className="grid items-center gap-6 lg:grid-cols-[.32fr_1fr]">
           <div className="relative mx-auto w-full max-w-[190px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5 shadow-2xl">
-            <img src="/sajedur-rahman.webp" alt="Md. Sajedur Rahman" className="aspect-[4/5] h-full w-full object-cover" />
+            <img src={father?.avatarUrl || "/sajedur-rahman.webp"} alt="Md. Sajedur Rahman" className="block aspect-[3/4] h-auto w-full object-contain object-center bg-[#0874d1]" />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-12">
               <span className="text-[10px] font-black uppercase tracking-[.12em] text-emerald-200">Faculty</span>
             </div>
