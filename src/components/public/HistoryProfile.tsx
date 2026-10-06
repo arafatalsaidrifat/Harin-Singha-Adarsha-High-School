@@ -6,9 +6,9 @@ interface Props { lang: 'bn' | 'en'; }
 
 export const HistoryProfile: React.FC<Props> = ({ lang }) => {
   const timeline = [
-    { year: '1970', titleEn: 'The beginning', titleBn: 'প্রতিষ্ঠার সূচনা', copyEn: 'Founded on January 1, 1970, in Harin Singha, Gaibandha Sadar, as a secondary education foundation for local rural students.', copyBn: '১৯৭০ সালের ১ জানুয়ারি গাইবান্ধা সদর উপজেলার হরিণ সিংহা গ্রামে স্থানীয় শিক্ষার্থীদের জন্য মাধ্যমিক শিক্ষার ভিত্তি হিসেবে প্রতিষ্ঠানটি যাত্রা শুরু করে।' },
-    { year: '1972', titleEn: 'Formal recognition', titleBn: 'প্রাতিষ্ঠানিক স্বীকৃতি', copyEn: 'Received formal recognition on January 1, 1972, under the Board of Intermediate and Secondary Education, Dinajpur.', copyBn: '১৯৭২ সালের ১ জানুয়ারি দিনাজপুর শিক্ষা বোর্ডের অধীনে প্রতিষ্ঠানটি আনুষ্ঠানিক স্বীকৃতি লাভ করে।' },
-    { year: '1972–Present', titleEn: 'Continuing the journey', titleBn: 'শিক্ষাযাত্রার ধারাবাহিকতা', copyEn: 'For more than five decades, the school has continued serving its community through Secondary Education in Science, Humanities and Business Studies.', copyBn: 'পাঁচ দশকেরও বেশি সময় ধরে বিজ্ঞান, মানবিক ও ব্যবসায় শিক্ষা বিভাগে মাধ্যমিক শিক্ষা প্রদানের মাধ্যমে প্রতিষ্ঠানটি স্থানীয় শিক্ষার্থীদের সেবা দিয়ে আসছে।' },
+    { year: '1970', titleEn: 'The beginning', titleBn: 'প্রতিষ্ঠার সূচনা', copyEn: 'Founded on January 1, 1970, in Gaibandha Sadar, Harin Singha Adarsha High School received formal recognition on January 1, 1972, under the Dinajpur Education Board. For over five decades, it has served as an educational foundation for rural students, offering Secondary Education in Science, Humanities, and Business Studies.', copyBn: '১৯৭০ সালের ১ জানুয়ারি গাইবান্ধা সদর উপজেলার হরিণ সিংহা গ্রামে প্রতিষ্ঠিত হয় হরিণ সিংহা আদর্শ উচ্চ বিদ্যালয়।' },
+    { year: '1972', titleEn: 'Formal recognition', titleBn: 'প্রাতিষ্ঠানিক স্বীকৃতি', copyEn: 'Received formal recognition on January 1, 1972, under the Board of Intermediate and Secondary Education, Dinajpur.', copyBn: '১৯৭২ সালের ১ জানুয়ারি দিনাজপুর শিক্ষাবোর্ডের অধীনে স্বীকৃতি লাভ করে প্রতিষ্ঠানটি।' },
+    { year: '1972–Present', titleEn: 'Continuing the journey', titleBn: 'শিক্ষাযাত্রার ধারাবাহিকতা', copyEn: 'For over five decades, it has served as an educational foundation for rural students, offering Secondary Education in Science, Humanities, and Business Studies.', copyBn: 'দীর্ঘ ৫০ বছরেরও বেশি সময় ধরে স্থানীয় শিক্ষার্থীদের শিক্ষা প্রদান করে আসছে প্রতিষ্ঠানটি। বিজ্ঞান, মানবিক ও ব্যবসায় শিক্ষা বিভাগে মাধ্যমিক শিক্ষা প্রদান করা হয়।' },
   ];
 
   const profile = [
