@@ -1,0 +1,6 @@
+{
+  "name": "Harin Singha Adarsha High School - Digital SMIS & DSHE Portal",
+  "description": "Official School Management Information System (SMIS) and 11-point DSHE Compliance Portal for Harin Singha Adarsha High School (EIIN: 121123, MPO: 8702091302), Dinajpur Education Board, Gaibandha.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
