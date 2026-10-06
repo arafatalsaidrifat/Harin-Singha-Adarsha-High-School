@@ -70,11 +70,24 @@ export const FacultyDirectory: React.FC<FacultyDirectoryProps> = ({ lang }) => {
             className="soft-card p-6 flex flex-col justify-between space-y-4"
           >
             <div className="flex items-start gap-4">
-              <div className="grid h-20 w-20 place-items-center rounded-2xl bg-gradient-to-br from-slate-950 via-emerald-800 to-emerald-500 text-base font-black text-white shadow-md border border-emerald-300/20">{teacher.nameBn.slice(0, 2)}</div>
+              {teacher.id === 'teacher-sajedur' ? (
+                <div className="h-20 w-20 shrink-0 overflow-hidden rounded-2xl border border-emerald-200 bg-slate-100 shadow-sm">
+                  <img src={teacher.avatarUrl} alt={teacher.name} className="h-full w-full object-cover" loading="eager" />
+                </div>
+              ) : (
+                <div className="grid h-20 w-20 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-slate-950 via-emerald-800 to-emerald-500 text-base font-black text-white shadow-md border border-emerald-300/20">{teacher.nameBn.slice(0, 2)}</div>
+              )}
               <div className="min-w-0 flex-1">
-                <span className="text-[10px] font-mono font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full inline-block">
-                  Index: {teacher.indexNumber}
-                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  <span className="text-[10px] font-mono font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full inline-block">
+                    Index: {teacher.indexNumber}
+                  </span>
+                  {teacher.id === 'teacher-sajedur' && (
+                    <span className="text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full inline-block">
+                      {lang === 'bn' ? 'বিশেষ পরিচিতি' : 'Featured profile'}
+                    </span>
+                  )}
+                </div>
                 <h3 className="font-extrabold text-slate-900 text-base leading-tight mt-1 truncate">
                   {lang === 'bn' ? teacher.nameBn : teacher.name}
                 </h3>
@@ -92,18 +105,18 @@ export const FacultyDirectory: React.FC<FacultyDirectoryProps> = ({ lang }) => {
                 <GraduationCap className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span className="truncate">{teacher.educationalQualification}</span>
               </div>
-              <div className="flex items-center gap-2 font-mono">
-                <Phone className="w-4 h-4 text-blue-500 shrink-0" />
-                <a href={`tel:${teacher.mobile}`} className="hover:text-slate-900">
-                  {teacher.mobile}
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-cyan-500 shrink-0" />
-                <a href={`mailto:${teacher.email}`} className="truncate hover:text-slate-900">
-                  {teacher.email}
-                </a>
-              </div>
+              {teacher.mobile && (
+                <div className="flex items-center gap-2 font-mono">
+                  <Phone className="w-4 h-4 text-blue-500 shrink-0" />
+                  <a href={`tel:${teacher.mobile}`} className="hover:text-slate-900">{teacher.mobile}</a>
+                </div>
+              )}
+              {teacher.email && (
+                <div className="flex items-center gap-2">
+                  <Mail className="w-4 h-4 text-cyan-500 shrink-0" />
+                  <a href={`mailto:${teacher.email}`} className="truncate hover:text-slate-900">{teacher.email}</a>
+                </div>
+              )}
               <div className="flex items-center gap-2">
                 <BookOpen className="w-4 h-4 text-amber-500 shrink-0" />
                 <span className="truncate text-slate-700 font-medium">
