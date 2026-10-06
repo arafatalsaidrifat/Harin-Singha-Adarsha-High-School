@@ -167,6 +167,15 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
                   <span>{lang === 'bn' ? 'শিক্ষক ও কর্মচারী ডিরেক্টরি' : 'Faculty & Staff Roster'}</span>
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('history')}
+                  className="hover:text-emerald-300 transition flex items-center gap-1.5 cursor-pointer"
+                >
+                  <FileText className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>{lang === 'bn' ? 'ইতিহাস ও প্রতিষ্ঠান পরিচিতি' : 'History & About the Institution'}</span>
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -221,18 +230,19 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
       </div>
 
       {/* Bottom Legal Bar */}
-      <div className="bg-black/80 py-4 px-4 sm:px-6 lg:px-8 border-t border-slate-900 text-xs text-slate-400">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div className="bg-black/80 py-5 px-4 sm:px-6 lg:px-8 border-t border-slate-900 text-xs text-slate-400">
+        <div className="max-w-7xl mx-auto grid gap-3 sm:grid-cols-2 items-center">
           <div>
-            © {new Date().getFullYear()}{' '}
-            <span className="font-semibold text-slate-200">
-              {lang === 'bn' ? SCHOOL_INFO.nameBn : SCHOOL_INFO.nameEn}
-            </span>
-            . {lang === 'bn' ? 'সর্বস্বত্ব সংরক্ষিত।' : 'All rights reserved.'} (EIIN: {SCHOOL_INFO.eiin})
+            <p className="font-semibold text-slate-200">
+              Copyright © 2026 Harin Singha Adarsha High School. All Rights Reserved.
+            </p>
+            <p className="mt-1 text-slate-500">
+              Developed by Md Arafat Al Said Rifat, BSc in Computer Science & Engineering
+            </p>
           </div>
-          <div className="flex items-center gap-4 text-slate-500">
+          <div className="sm:text-right text-slate-500">
             <span>DSHE EMIS / IMS Compliant</span>
-            <span>•</span>
+            <span className="mx-2">•</span>
             <span>Dinajpur Education Board</span>
           </div>
         </div>
