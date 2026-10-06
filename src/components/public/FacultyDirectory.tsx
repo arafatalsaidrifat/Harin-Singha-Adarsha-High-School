@@ -29,10 +29,10 @@ export const FacultyDirectory: React.FC<FacultyDirectoryProps> = ({ lang }) => {
   );
 
   return (
-    <div className="space-y-6 py-6">
+    <div className="space-y-8 py-3">
       
       {/* Header Card */}
-      <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+      <div className="soft-card p-6 sm:p-8 space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
@@ -67,7 +67,7 @@ export const FacultyDirectory: React.FC<FacultyDirectoryProps> = ({ lang }) => {
         {filtered.map((teacher) => (
           <div
             key={teacher.id}
-            className="bg-white rounded-2xl border border-slate-200 shadow-xs hover:shadow-md transition p-6 flex flex-col justify-between space-y-4"
+            className="soft-card p-6 flex flex-col justify-between space-y-4"
           >
             <div className="flex items-start gap-4">
               <img
